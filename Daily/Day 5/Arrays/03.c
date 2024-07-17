@@ -1,4 +1,4 @@
-// Find average of non prime numbers numbers in an array
+// Find average of non prime numbers in an array
 
 #include <stdio.h>
 #include <stdbool.h>

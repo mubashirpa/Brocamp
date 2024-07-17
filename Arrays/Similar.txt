@@ -1,0 +1,75 @@
+Basic Array Operations
+1. Sum of all elements of the array
+2. Average of all elements in the array
+3. Copy the elements of one array into another array
+4. Reverse an array without using an additional array
+5. Insert a new value in an unsorted array at a specific position
+6. Delete an element from a specific position in the array
+7. Find the index of a specific element in the array
+
+Sum and Average Calculations
+1. Sum of even numbers in an array
+2. Sum of odd numbers in an array
+3. Average of even numbers in an array
+4. Average of odd numbers in an array
+5. Average of prime numbers in an array
+6. Average of non-prime numbers in an array
+
+Finding Specific Elements
+1. Find the largest element in an array without sorting
+2. Find the smallest element in an array without sorting
+3. Find the second largest element in an array without sorting
+4. Find the second smallest element in an array without sorting
+5. Find the third largest element in an array
+6. Find the third smallest element in an array
+
+Sorting Operations
+1. Sort elements of an array in ascending order
+2. Sort elements of an array in descending order
+3. Insert a new value in a sorted array
+
+Moving and Replacing Elements
+1. Move all zeros to the beginning of an array without sorting
+2. Move all zeros to the end of an array
+3. Move all negative numbers to the beginning of an array without sorting *
+4. Replace all negative elements in the array with zeros
+5. Replace prime numbers by their index position
+
+Separating and Merging
+1. Separate odd and even integers into separate arrays
+2. Separate even and odd elements into two separate arrays
+3. Merge two unsorted arrays in sorted order
+4. Merge two arrays into a third array
+
+Frequency and Duplication
+1. Count the frequency of each element of an array
+2. Print all unique elements in an array
+3. Print duplicate elements in an array
+4. Find the most repeated number in an array
+5. Find array elements that occur 2 times in the array
+6. Find array elements that occur exactly three times
+7. Remove duplicates from the array
+
+Prime and Non-Prime Numbers
+1. Find prime numbers in an array
+2. Find non-prime numbers in an array
+3. Remove all the odd numbers in an array
+4. Remove all the even numbers in an array
+5. Remove all the prime numbers in an array
+6. Find unique non-prime numbers in an array
+7. Remove all the prime numbers and remove all the non-prime numbers
+8. Find non-prime numbers in an array and insert their double after the same *
+
+Deletion Operations
+1. Delete two elements after the occurrence of an even number
+2. Delete two elements after the occurrence of a prime number
+3. Delete two elements after the occurrence of an odd number
+4. Delete three elements after the occurrence of a prime number
+5. Delete three elements after the occurrence of a non-prime number
+
+Miscellaneous
+1. Find the element that appears more than n/2 times in the array
+2. Find unique non-prime numbers in an array
+3. Find the frequency of all elements in the array
+4. Print an array in reverse order
+5. Find the maximum and minimum element in an array

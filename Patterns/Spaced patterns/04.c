@@ -83,7 +83,7 @@ int main()
   //     comp = 2 * (i - rows + 1) + 1;
   //   }
 
-  //   for (int j = 0; j < comp; j++)
+  //   for (int j = 1; j < comp; j++)
   //   {
   //     printf(" ");
   //   }
@@ -96,7 +96,7 @@ int main()
   //   printf("\n");
   // }
 
-    for (int i = 0; i < 2 * rows - 1; i++)
+  for (int i = 0; i < 2 * rows - 1; i++)
   {
     int comp;
     if (i < rows)
@@ -108,7 +108,7 @@ int main()
       comp = 2 * (i - rows + 1) + 1;
     }
 
-    for (int j = 0; j < comp; j++)
+    for (int j = 1; j < comp; j++)
     {
       printf(" ");
     }

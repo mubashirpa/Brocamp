@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #191919;
+}
+
+/* Top navigation bar */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 4px 16px;
+    box-shadow: 2px 2px 5px #e6dcdc;
+    position: fixed;
+    z-index: 1;
+}
+
+.topbar-left {
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.topbar-left img {
+    width: 40px;
+    height: 40px;
+}
+
+.search-bar {
+    width: 250px;
+    height: 40px;
+    background: #f0f2f5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.search-bar img {
+    width: 16px;
+    height: 16px;
+}
+
+.search-bar-text {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 14.7px;
+    outline: 0;
+    position: relative;
+    right: -8px;
+}
+
+.topbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.topbar-center-item {
+    width: 100px;
+    height: 48px;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.topbar-center-item:hover {
+    background-color: #8080801d;
+}
+
+.topbar-center-item img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topbar-right {
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.topbar-right-item {
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    background-color: #d8dadf;
+    border-radius: 50%;
+}
+
+.topbar-right-item img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topbar-right .badge {
+    position: relative;
+}
+
+.topbar-right .badge::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '5';
+    font-size: 13px;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e41e3f;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+}
+
+/* Content */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 56px;
+    padding: 20px 1%;
+}
+
+/* Left sidebar */
+
+.left-sidebar {
+    flex-basis: 23%;
+    position: sticky;
+    align-self: flex-start;
+}
+
+.menu {
+    align-content: center;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.menu:hover {
+    background-color: #8080801d;
+}
+
+.menu img {
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.menu .profile {
+    border-radius: 50%;
+}
+
+.menu span {
+    font-weight: 500;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-button .icon {
+    width: 36px;
+    height: 36px;
+    background-color: #d8dadf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-button img {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Posts */
+
+.main-content {
+    flex-basis: 42%;
+}
+
+/* Right sidebar */
+
+.right-sidebar {
+    flex-basis: 23%;
+    position: sticky;
+    align-self: flex-start;
+}
+
+.right-sidebar .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.right-sidebar .header span {
+    color: #65666a;
+    font-weight: bold;
+    margin-left: 8px;
+    /* To push the buttons to end, also needs justify-content: space-between; in the parent */
+    margin-right: auto;
+}
+
+.right-sidebar .header .button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-sidebar .header .button:hover {
+    background: #8080801d;
+}
+
+.right-sidebar .header .button img {
+    width: 16px;
+    height: 16px;
+}
+
+.list-friends {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.list-friends:hover {
+    background-color: #8080801d;
+}
+
+.list-friends img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.online::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 25px;
+    bottom: 8px;
+    background: #30a24d;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}

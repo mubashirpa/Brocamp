@@ -208,7 +208,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    /* background-color: aqua; */
 }
 
 /* Stories */
@@ -357,6 +356,123 @@ nav {
 
 .create-more-item img {
     width: 24px;
+}
+
+/* Posts */
+
+.post-item {
+    background: white;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.author-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.author-details {
+    /* To push the buttons to end, also needs justify-content: space-between; in the parent */
+    margin-right: auto;
+}
+
+.author-details .headline-content {
+    color: #050505;
+    font-size: 16px;
+}
+
+.author-details .supporting-content {
+    color: #65676b;
+    font-size: 14px;
+}
+
+.post-menu {
+    display: flex;
+    justify-content: end;
+}
+
+.post-menu .button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-menu .button:hover {
+    background: #8080801d;
+}
+
+.post-menu .button img {
+    width: 16px;
+    height: 16px;
+}
+
+.post-text span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #050505;
+}
+
+.post-image {
+    margin: 10px 0px;
+}
+
+.post-image img {
+    width: calc(100% + 28px);
+    margin-left: -14px;
+    object-fit: fill;
+}
+
+.post-interactions {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    color: #65676b;
+}
+
+.reaction-count {
+    display: flex;
+}
+
+.reaction-count img {
+    width: 18px;
+    height: 18px;
+}
+
+.post-footer {
+    display: flex;
+    align-items: center;
+}
+
+.post-footer-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-footer-item:hover {
+    background: #8080801d;
+}
+
+.post-footer-item img {
+    width: 20px;
 }
 
 /* Right sidebar */

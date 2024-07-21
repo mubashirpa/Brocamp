@@ -10,6 +10,8 @@ body {
     color: #0f0f0f;
 }
 
+/* Icon button */
+
 .button {
     width: 40px;
     height: 40px;
@@ -29,6 +31,8 @@ body {
     height: 24px;
 }
 
+/* Top app bar */
+
 nav {
     width: 100%;
     height: 56px;
@@ -36,6 +40,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0px 16px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
 
 nav .leading {
@@ -120,4 +128,113 @@ nav .trailing .profile {
     border-radius: 50%;
     margin: 0px 10px;
     cursor: pointer;
+}
+
+/* Left sidebar */
+
+.sidebar {
+    /* Reduced scrollbar width from sidebar width */
+    width: calc(248px - 8px);
+    /* Reduced top app bar height from sidebar height */
+    height: calc(100% - 56px);
+    padding: 0px 10px;
+    position: fixed;
+    /* Top app bar height */
+    top: 56px;
+    overflow-y: scroll;
+}
+
+.sidebar .divider {
+    border-top: 1px solid #e5e5e5;
+    margin: 12px 0px;
+}
+
+.sidebar .title {
+    font-weight: 550;
+    font-size: 15px;
+    padding: 8px 14px;
+}
+
+.sidebar .streaming img {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-item {
+    height: 40px;
+    padding: 0px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: #8080804d;
+}
+
+.sidebar-item img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.sidebar-item span {
+    width: 100%;
+    /* Set single line */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-item-selected {
+    background-color: #8080804d;
+    font-weight: bold;
+}
+
+.sidebar-item-title {
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.sidebar-item-title img {
+    width: 20px;
+    height: 20px;
+    margin-left: -18px;
+}
+
+/* Sidebar scrollbar */
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background: #909090;
+}
+
+/* sidebar footer */
+
+.sidebar .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0px 14px;
+}
+
+.sidebar .footer a {
+    color: #606060;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar .copyright {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0px 14px;
+    color: #90929a;
 }

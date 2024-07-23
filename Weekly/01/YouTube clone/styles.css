@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: white;
     color: #0f0f0f;
 }
@@ -130,17 +130,24 @@ nav .trailing .profile {
     cursor: pointer;
 }
 
+/* Container */
+
+.container {
+    width: 100%;
+    /* Reduced top app bar height from container height */
+    height: calc(100vh - 56px);
+    position: fixed;
+    /* Top app bar height */
+    top: 56px;
+    display: flex;
+}
+
 /* Left sidebar */
 
 .sidebar {
     /* Reduced scrollbar width from sidebar width */
     width: calc(248px - 8px);
-    /* Reduced top app bar height from sidebar height */
-    height: calc(100% - 56px);
     padding: 0px 10px;
-    position: fixed;
-    /* Top app bar height */
-    top: 56px;
     overflow-y: scroll;
 }
 
@@ -237,4 +244,78 @@ nav .trailing .profile {
     font-weight: 400;
     padding: 0px 14px;
     color: #90929a;
+}
+
+.content {
+    /* Reduced sidebar width from content width */
+    width: calc(100% - 240px);
+    overflow-x: auto;
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    grid-gap: 14px;
+    padding: 24px;
+}
+
+.video-item {
+    width: 100%;
+}
+
+.video-item a {
+    color: #0f0f0f;
+    text-decoration: none;
+}
+
+.video-item .thumbnail-container {
+    position: relative;
+}
+
+.video-item .thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+}
+
+.video-item .duration {
+    background-color: #0000007c;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.video-item .details {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.video-item .leading {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-item .headline {
+    width: 100%;
+}
+
+.video-item .title {
+    font-weight: 600;
+    line-height: 20px
+}
+
+.video-item .subtitle {
+    font-size: 14px;
+    color: #606060;
+}
+
+.video-item .trailing {
+    width: 24px;
+    height: 24px;
 }

@@ -246,13 +246,17 @@ nav .trailing .profile {
     color: #90929a;
 }
 
+/* Content */
+
 .content {
     /* Reduced sidebar width from content width */
     width: calc(100% - 240px);
     overflow-x: auto;
 }
 
-.grid-view {
+/* Videos */
+
+.videos-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
     grid-gap: 14px;
@@ -291,6 +295,7 @@ nav .trailing .profile {
 
 .video-item .details {
     display: flex;
+    align-items: start;
     gap: 10px;
     margin: 10px 0px;
 }
@@ -318,4 +323,105 @@ nav .trailing .profile {
 .video-item .trailing {
     width: 24px;
     height: 24px;
+}
+
+/* Shorts */
+
+.shorts-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0px 6px 32px;
+}
+
+.shorts-header img {
+    width: 24px;
+    height: 24px;
+}
+
+.shorts-header span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.shorts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    grid-gap: 14px;
+    padding: 24px;
+}
+
+.shorts-item {
+    width: 100%;
+}
+
+.shorts-item a {
+    color: #0f0f0f;
+    text-decoration: none;
+}
+
+.shorts-item .thumbnail {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    object-fit: fill;
+}
+
+.shorts-item .details {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.shorts-item .headline {
+    width: 100%;
+}
+
+.shorts-item .title {
+    font-weight: 600;
+    line-height: 20px
+}
+
+.shorts-item .subtitle {
+    font-size: 14px;
+    color: #606060;
+}
+
+.shorts-item .trailing {
+    width: 24px;
+    height: 24px;
+}
+
+.show-more-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 12px 24px;
+}
+
+.show-more-container .divider {
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.show-more {
+    min-width: 360px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    background-color: #8080804d;
+}
+
+.show-more span {
+    color: #0f0f0f;
+    font-weight: 500;
 }

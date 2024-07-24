@@ -254,6 +254,49 @@ nav .trailing .profile {
     overflow-x: auto;
 }
 
+/* Filter */
+
+.filter-container {
+    /* Reduced sidebar width from filter container width */
+    width: calc(100% - 240px);
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 10px 24px;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+}
+
+.filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    height: 32px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.filter-chip span {
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.selected-filter-chip {
+    background-color: black;
+}
+
+.selected-filter-chip span {
+    color: white;
+}
+
 /* Videos */
 
 .videos-container {
@@ -261,6 +304,8 @@ nav .trailing .profile {
     grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
     grid-gap: 14px;
     padding: 24px;
+    /* Height of filter container */
+    margin-top: 52px;
 }
 
 .video-item {

@@ -249,23 +249,21 @@ nav .trailing .profile {
 /* Content */
 
 .content {
-    /* Reduced sidebar width from content width */
-    width: calc(100% - 240px);
+    flex: 1;
     overflow-x: auto;
 }
 
 /* Filter */
 
 .filter-container {
-    /* Reduced sidebar width from filter container width */
-    width: calc(100% - 240px);
+    padding: 10px 24px;
+    background-color: white;
     display: flex;
     gap: 10px;
     overflow-x: scroll;
-    padding: 10px 24px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 1;
-    background-color: white;
 }
 
 .filter-container::-webkit-scrollbar {
@@ -304,8 +302,6 @@ nav .trailing .profile {
     grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
     grid-gap: 14px;
     padding: 24px;
-    /* Height of filter container */
-    margin-top: 52px;
 }
 
 .video-item {

@@ -1,38 +1,39 @@
 * {
     margin: 0;
-    padding: 0%;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+html {
+    font-family: Roboto, Arial, sans-serif;
     color: #191919;
+    background-color: #f0f2f5;
 }
 
-/* Top navigation bar */
+/* Top appbar */
 
 nav {
     width: 100%;
+    height: 56px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background: white;
+    justify-content: space-between;
     padding: 4px 16px;
+    background: white;
     box-shadow: 2px 2px 5px #e6dcdc;
     position: fixed;
+    top: 0px;
+    left: 0px;
     z-index: 1;
 }
 
-.topbar-left {
+nav .leading {
     flex-basis: 25%;
     display: flex;
     align-items: center;
-    justify-content: start;
     gap: 8px;
 }
 
-.topbar-left img {
+nav .leading .logo {
     width: 40px;
     height: 40px;
 }
@@ -41,36 +42,34 @@ nav {
     width: 250px;
     height: 40px;
     background: #f0f2f5;
-    border-radius: 20px;
     display: flex;
     align-items: center;
+    border-radius: 28px;
     padding: 0px 15px;
 }
 
 .search-bar img {
     width: 16px;
     height: 16px;
+    margin-right: 8px;
 }
 
-.search-bar-text {
-    display: flex;
-    align-items: center;
-    border: none;
-    background: transparent;
+.search-bar .input-field {
+    width: 100%;
     font-size: 14.7px;
+    background: transparent;
     outline: 0;
-    position: relative;
-    right: -8px;
+    border: none;
 }
 
-.topbar-center {
+nav .headline {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
-.topbar-center-item {
+nav .headline .headline-item {
     width: 100px;
     height: 48px;
     align-content: center;
@@ -78,11 +77,11 @@ nav {
     border-radius: 10px;
 }
 
-.topbar-center-item:hover {
-    background-color: #8080801d;
+nav .headline .headline-item:hover {
+    background-color: #0000000d;
 }
 
-.topbar-center-item img {
+nav .headline .headline-item img {
     width: 24px;
     height: 24px;
     display: block;
@@ -90,7 +89,7 @@ nav {
     margin-right: auto;
 }
 
-.topbar-right {
+nav .trailing {
     flex-basis: 25%;
     display: flex;
     align-items: center;
@@ -98,7 +97,7 @@ nav {
     gap: 10px;
 }
 
-.topbar-right-item {
+nav .trailing .trailing-item {
     width: 40px;
     height: 40px;
     align-content: center;
@@ -106,7 +105,7 @@ nav {
     border-radius: 50%;
 }
 
-.topbar-right-item img {
+nav .trailing .trailing-item img {
     width: 20px;
     height: 20px;
     display: block;
@@ -114,11 +113,11 @@ nav {
     margin-right: auto;
 }
 
-.topbar-right .badge {
+nav .trailing .badge {
     position: relative;
 }
 
-.topbar-right .badge::after {
+nav .trailing .badge::after {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,85 +136,112 @@ nav {
 /* Content */
 
 .container {
+    width: 100%;
+    /* Reduced top app bar height from container height */
+    height: calc(100vh - 56px);
+    position: fixed;
+    /* Top app bar height */
+    top: 56px;
     display: flex;
     justify-content: space-between;
-    position: relative;
-    top: 56px;
-    padding: 20px 1%;
 }
 
 /* Left sidebar */
 
 .left-sidebar {
     flex-basis: 23%;
-    position: sticky;
-    align-self: flex-start;
+    overflow-y: auto;
+    padding: 14px 10px;
 }
 
-.menu {
-    align-content: center;
-    padding: 8px 6px;
-    cursor: pointer;
+/* Left sidebar scrollbar */
+
+.left-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-sidebar:hover::-webkit-scrollbar-thumb {
+    background: #bcc0c4;
     border-radius: 10px;
 }
 
-.menu:hover {
-    background-color: #8080801d;
+/* Left sidebar item */
+
+.left-sidebar .item {
+    display: flex;
+    align-items: center;
+    padding: 8px 6px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.menu img {
+.left-sidebar .item:hover {
+    background-color: #0000000d;
+}
+
+.left-sidebar .item .icon {
     width: 36px;
     height: 36px;
     margin-right: 16px;
-    vertical-align: middle;
 }
 
-.menu .profile {
+.left-sidebar .item .profile {
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
     border-radius: 50%;
 }
 
-.menu span {
+.left-sidebar .item span {
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.menu-button {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.menu-button .icon {
+.left-sidebar .item .button {
     width: 36px;
     height: 36px;
     background-color: #d8dadf;
     border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-right: 16px;
 }
 
-.menu-button img {
+.left-sidebar .item .button img {
     width: 18px;
     height: 18px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Posts */
 
 .main-content {
-    flex-basis: 42%;
-    width: 42%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     gap: 18px;
+    padding: 24px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Posts scrollbar */
+
+.main-content::-webkit-scrollbar {
+    display: none;
 }
 
 /* Stories */
 
 .stories {
+    width: 100%;
+    min-height: 240px;
     display: flex;
     gap: 10px;
-    overflow-x: scroll;
+    position: relative;
+    overflow-x: auto;
 }
 
 .stories::-webkit-scrollbar {
@@ -235,31 +261,37 @@ nav {
 .story .story-image {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     position: absolute;
 }
 
 .story .story-divider {
     width: 100%;
     height: 100%;
-    position: relative;
-    background-color: #00000063;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.39);
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .story .story-profile {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #075ce5;
     border-radius: 50%;
+    position: absolute;
     top: 10px;
     left: 10px;
-    position: absolute;
+    z-index: 2;
 }
 
 .story p {
-    position: absolute;
     color: white;
-    top: 210px;
+    position: absolute;
+    bottom: 10px;
     left: 10px;
+    z-index: 2;
 }
 
 .story-create {
@@ -274,26 +306,28 @@ nav {
 
 .story-create .story-image {
     width: 100%;
-    height: 75%;
+    height: 80%;
     object-fit: fill;
     position: absolute;
 }
 
 .story-create .story-profile {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    top: 160px;
-    left: calc(50% - 18px);
     position: absolute;
+    top: calc(80% - 18px);
+    left: calc(50% - 18px);
+    border: 4px solid white;
 }
 
 .story-create p {
-    width: 100%;
-    position: absolute;
     color: black;
-    top: 210px;
     text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
 }
 
 /* New post */
@@ -351,7 +385,7 @@ nav {
 }
 
 .create-more-item:hover {
-    background: #8080801d;
+    background: #0000000d;
 }
 
 .create-more-item img {
@@ -410,7 +444,7 @@ nav {
 }
 
 .post-menu .button:hover {
-    background: #8080801d;
+    background: #0000000d;
 }
 
 .post-menu .button img {
@@ -468,7 +502,7 @@ nav {
 }
 
 .post-footer-item:hover {
-    background: #8080801d;
+    background: #0000000d;
 }
 
 .post-footer-item img {
@@ -479,8 +513,19 @@ nav {
 
 .right-sidebar {
     flex-basis: 23%;
-    position: sticky;
-    align-self: flex-start;
+    overflow-y: auto;
+    padding: 14px 10px;
+}
+
+/* Right sidebar scrollbar */
+
+.right-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-sidebar:hover::-webkit-scrollbar-thumb {
+    background: #bcc0c4;
+    border-radius: 10px;
 }
 
 .right-sidebar .header {
@@ -502,14 +547,14 @@ nav {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .right-sidebar .header .button:hover {
-    background: #8080801d;
+    background: #0000000d;
 }
 
 .right-sidebar .header .button img {
@@ -528,23 +573,29 @@ nav {
 }
 
 .list-friends:hover {
-    background-color: #8080801d;
+    background-color: #0000000d;
 }
 
 .list-friends img {
-    border-radius: 50%;
     width: 36px;
     height: 36px;
+    border-radius: 50%;
 }
 
-.online::after {
+.list-friends .online::after {
     content: '';
     width: 10px;
     height: 10px;
     position: absolute;
-    left: 25px;
+    left: 30px;
     bottom: 8px;
     background: #30a24d;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid white;
+}
+
+.list-friends p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

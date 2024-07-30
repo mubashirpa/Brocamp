@@ -285,6 +285,48 @@ nav .trailing .profile {
     font-weight: 400;
 }
 
+/* Navigation rail */
+
+.navigation-rail {
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4px;
+    padding-top: 4px;
+}
+
+.navigation-rail-item {
+    width: 64px;
+    padding: 16px 0 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.navigation-rail-item:hover {
+    background-color: #0000000d;
+}
+
+.navigation-rail-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.navigation-rail-item span {
+    max-width: 100%;
+    display: block;
+    max-height: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
 /* Content */
 
 .content {

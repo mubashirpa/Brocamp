@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border VS Outline</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 10px;
+      }
+
+      #div1 {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+        display: block;
+        border: 5px solid black;
+      }
+
+      #div2 {
+        width: 200px;
+        height: 100px;
+        background-color: blueviolet;
+        display: block;
+      }
+
+      #div3 {
+        width: 200px;
+        height: 100px;
+        background-color: brown;
+        display: block;
+        outline: 5px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="div1"><h1 style="text-align: center">Border</h1></div>
+      <div id="div2"><h1 style="text-align: center">None</h1></div>
+      <div id="div3"><h1 style="text-align: center">Outline</h1></div>
+    </div>
+  </body>
+</html>

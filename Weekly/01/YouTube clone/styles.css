@@ -496,14 +496,12 @@ nav .trailing .profile {
 }
 
 .shorts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    display: flex;
     margin: 0 16px;
     margin-bottom: 20px;
 }
 
 .shorts-item {
-    width: 100%;
     padding: 8px;
     border-radius: 12px;
 }

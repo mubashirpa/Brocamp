@@ -1,0 +1,40 @@
+/* Extra small */
+@media only screen and (max-width: 575px) {}
+
+/* Small */
+@media only screen and (min-width: 576px) {
+    :root {
+        --icon-button-size: 40px;
+        --navbar-height: 56px;
+        --navbar-padding-x: 8px;
+        --navbar-brand-img-padding: 0 14px 0 16px;
+        --navbar-profile-img-size: 32px;
+    }
+
+    #navbar-profile-button {
+        width: 48px;
+        height: 34px;
+        margin: 0 6px;
+    }
+
+    #navbar-profile-button:hover {
+        background-color: transparent;
+    }
+}
+
+/* Medium */
+@media only screen and (min-width: 768px) {
+    :root {
+        --navbar-padding-x: 16px;
+        --navbar-trailing-gap: 8px;
+    }
+}
+
+/* Larger */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large */
+@media only screen and (min-width: 1200px) {}
+
+/* Extra extra large */
+@media only screen and (min-width: 1400px) {}

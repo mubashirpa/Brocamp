@@ -21,6 +21,11 @@ html {
     height: var(--icon-button-size);
 }
 
+.button img {
+    width: 24px;
+    height: 24px;
+}
+
 .button:hover {
     background-color: #0000000d;
 }
@@ -40,17 +45,21 @@ html {
 
 #navbar-searchbar-container {
     max-width: 732px;
-    padding: 0 40px;
+    padding-left: 40px;
 }
 
 #navbar-searchbar {
     height: 40px;
-    border: 1px solid #d3d3d3;
+    margin-left: 32px;
+    margin-right: 12px;
+    border: 0.8px solid #d3d3d3;
     border-radius: 40px;
 }
 
 #navbar-searchbar #searchbar-input-field {
     width: 100%;
+    padding-left: 16px;
+    padding-right: 4px;
     background: transparent;
     outline: 0;
     border: none;
@@ -76,7 +85,7 @@ html {
     height: 40px;
     border-radius: 0px 40px 40px 0px;
     background-color: #f0f0f0;
-    border-left: 1px solid #d3d3d3;
+    border-left: 0.8px solid #d3d3d3;
 }
 
 #navbar-searchbar #searchbar-trailing:hover {
@@ -85,6 +94,10 @@ html {
 
 #navbar-searchbar #seachbar-mic {
     background-color: #f2f2f2;
+}
+
+#navbar-trailing {
+    min-width: 225px;
 }
 
 #navbar-profile-img {

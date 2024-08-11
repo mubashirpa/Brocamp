@@ -5,12 +5,14 @@
     --navbar-brand-img-padding: 0 12px;
     --navbar-profile-img-size: 24px;
     --navbar-trailing-gap: 0px;
+
+    --font-color: #0f0f0f;
 }
 
 html {
     font-size: 10px;
     font-family: Roboto, Arial, sans-serif;
-    color: #0f0f0f;
+    color: var(--font-color);
     background-color: white;
 }
 
@@ -35,6 +37,7 @@ html {
 #navbar {
     height: var(--navbar-height);
     padding: 0 var(--navbar-padding-x) !important;
+    background-color: white;
 }
 
 #navbar-brand-img {
@@ -103,6 +106,132 @@ html {
 #navbar-profile-img {
     width: var(--navbar-profile-img-size);
     height: var(--navbar-profile-img-size);
+}
+
+/* Navigation wrapper */
+
+#navigation-wrapper {
+    top: var(--navbar-height);
+}
+
+/* Sidebar */
+
+#sidebar {
+    width: 240px;
+    overflow: hidden;
+    scrollbar-width: thin;
+}
+
+#sidebar:hover {
+    overflow-y: auto;
+}
+
+/* Sidebar scrollbar */
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #909090;
+}
+
+/* Sidebar content */
+
+#sidebar .divider {
+    border-top: 1px solid #e5e5e5;
+    margin-right: 12px;
+}
+
+#sidebar .nav-pills {
+    width: 240px;
+    padding: 12px !important;
+}
+
+#sidebar .section-title {
+    padding: 6px 12px 4px;
+}
+
+#sidebar .section-title h3 {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: var(--font-color);
+}
+
+#sidebar .nav-item .nav-link {
+    width: calc(100% - 12px);
+    height: 40px;
+    padding: 0px 12px !important;
+    border-radius: 10px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: var(--font-color);
+}
+
+#sidebar .nav-item .nav-link:hover {
+    background-color: #0000000d;
+}
+
+#sidebar .nav-item .nav-link .leading {
+    margin-right: 24px;
+}
+
+#sidebar .nav-item .nav-link .trailing.newness-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #065fd4;
+    margin: 0 6px;
+}
+
+#sidebar .nav-item .nav-link.active {
+    background-color: #0000000d;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--font-color);
+}
+
+#sidebar .nav-item .nav-link.header {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: var(--font-color);
+}
+
+#sidebar .nav-item .nav-link.header .trailing {
+    margin-left: 8px;
+}
+
+#sidebar .footer {
+    width: 240px;
+    padding: 16px 24px 0px;
+}
+
+#sidebar .footer a {
+    margin-right: 8px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #606060;
+    text-decoration: none;
+}
+
+#sidebar .footer span {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #909090;
+}
+
+/* Content */
+
+#content {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Custom classes */

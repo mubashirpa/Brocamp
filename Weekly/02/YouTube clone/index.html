@@ -83,7 +83,7 @@
             <div
               role="button"
               class="button d-flex justify-content-center align-items-center rounded-pill me-2"
-              id="seachbar-mic"
+              id="searchbar-mic"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
               data-bs-title="Search with your voice"
@@ -155,7 +155,7 @@
 
       <!-- Navigation wrapper -->
       <div
-        class="d-flex flex-nowrap flex-column flex-sm-row fixed-top fixed-bottom"
+        class="d-flex flex-nowrap flex-column flex-sm-row"
         id="navigation-wrapper"
       >
         <!-- Sidebar -->
@@ -849,25 +849,25 @@
           <!-- drawer footer -->
 
           <footer class="footer">
-            <a href="#">About</a>
-            <a href="#">Press</a>
-            <a href="#">Copyright</a>
-            <a href="#">Contact us</a>
-            <a href="#">Creator</a>
-            <a href="#">Advertise</a>
-            <a href="#">Developers</a>
-          </footer>
-
-          <footer class="footer">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Policy & Safety</a>
-            <a href="#">How YouTube works</a>
-            <a href="#">Test new features</a>
-          </footer>
-
-          <footer class="footer" style="padding-bottom: 16px">
-            <span>© 2024 Google LLC</span>
+            <div class="footer-section">
+              <a href="#">About</a>
+              <a href="#">Press</a>
+              <a href="#">Copyright</a>
+              <a href="#">Contact us</a>
+              <a href="#">Creator</a>
+              <a href="#">Advertise</a>
+              <a href="#">Developers</a>
+            </div>
+            <div class="footer-section">
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
+              <a href="#">Policy & Safety</a>
+              <a href="#">How YouTube works</a>
+              <a href="#">Test new features</a>
+            </div>
+            <div class="footer-section" style="padding-bottom: 16px">
+              <span>© 2024 Google LLC</span>
+            </div>
           </footer>
         </div>
 
@@ -944,7 +944,7 @@
               >
                 <img
                   src="images/you.svg"
-                  alt="Shorts"
+                  alt="You"
                   class="icon"
                   role="img"
                   width="24"
@@ -976,7 +976,206 @@
         </div>
 
         <!-- Content -->
-        <div class="container-fluid p-0 flex-fill" id="content"></div>
+        <div class="container-fluid flex-grow-1" id="content">
+          <div class="row gy-3" id="content-row">
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video1.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>17:19</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel5.jpg"
+                    alt="Philipp Lackner"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">
+                      Permission Handling in Compose Multiplatform - KMP for
+                      Beginners
+                    </h3>
+                    <span class="subtitle">Philipp Lackner</span>
+                    <br />
+                    <span class="subtitle">2.5K views • 1 day ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video2.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>12:47</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel6.jpg"
+                    alt="Marques Brownlee"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">iOS 18 Hands-On: Top 5 Features!</h3>
+                    <span class="subtitle">Marques Brownlee</span>
+                    <br />
+                    <span class="subtitle">5M views • 7 days ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video3.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>9:20</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel7.jpg"
+                    alt="Mrwhosetheboss"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">
+                      How NVIDIA just beat every other tech company
+                    </h3>
+                    <span class="subtitle">Mrwhosetheboss</span>
+                    <br />
+                    <span class="subtitle">1.2M views • 2 days ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+
+            <div class="d-none col-12 bg-primary">
+              <div class="row row-cols-5">
+                <div class="shorts-item">
+                  <a href="#">
+                    <img
+                      src="images/shorts1.png"
+                      alt="Shorts"
+                      class="thumbnail"
+                    />
+                    <div class="details">
+                      <div class="headline">
+                        <span class="title">How You Reduce Bugs By 85%</span>
+                        <span class="subtitle">8.1K views</span>
+                      </div>
+                      <img src="images/more.svg" alt="More" class="trailing" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video4.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>45:28</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel3.jpg"
+                    alt="Kotlin by JetBrains"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">
+                      Enabling Koltin Multiplatform Success: The Android Jetpack
+                      Journey
+                    </h3>
+                    <span class="subtitle">Kotlin by JetBrains</span>
+                    <br />
+                    <span class="subtitle">3.7K views • 6 days ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video5.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>28:25</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel1.jpg"
+                    alt="MrBeast"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">World's Deadliest Obstacle Course!</h3>
+                    <span class="subtitle">MrBeast</span>
+                    <br />
+                    <span class="subtitle">176M views • 1 month ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+
+            <div class="video-item col-12 col-sm-6 col-lg-4">
+              <a href="#">
+                <div class="thumbnail-container">
+                  <img
+                    src="images/video6.png"
+                    alt="Video"
+                    class="ratio ratio-16x9"
+                    loading="lazy"
+                  />
+                  <span>8:18</span>
+                </div>
+                <div class="details d-flex">
+                  <img
+                    src="images/channel2.jpg"
+                    alt="Panda"
+                    class="leading rounded-pill"
+                  />
+                  <div class="headline flex-fill">
+                    <h3 class="title">I GOT NEW M4 Glacier in 2024!! 😱</h3>
+                    <span class="subtitle">MrwhosethebossPanda</span>
+                    <br />
+                    <span class="subtitle">841K views • 3 months ago</span>
+                  </div>
+                  <img src="images/more.svg" alt="More" class="trailing" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!-- Bottom navbar -->
         <nav class="navbar d-flex d-sm-none p-0" id="bottom-navbar">
@@ -987,6 +1186,7 @@
                   href="#"
                   class="nav-link active d-flex flex-column align-items-center justify-content-center p-0"
                   aria-current="page"
+                  aria-label="Home"
                 >
                   <img
                     src="images/home.svg"
@@ -1002,6 +1202,7 @@
                 <a
                   href="#"
                   class="nav-link d-flex flex-column align-items-center justify-content-center p-0"
+                  aria-label="Shorts"
                 >
                   <img
                     src="images/shorts.svg"
@@ -1017,6 +1218,7 @@
                 <a
                   href="#"
                   class="nav-link d-flex flex-column align-items-center justify-content-center p-0"
+                  aria-label="Subscriptions"
                 >
                   <img
                     src="images/subscriptions.svg"
@@ -1032,6 +1234,7 @@
                 <a
                   href="#"
                   class="nav-link d-flex flex-column align-items-center justify-content-center p-0"
+                  aria-label="Library"
                 >
                   <img
                     src="images/you.svg"

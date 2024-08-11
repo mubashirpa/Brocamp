@@ -51,6 +51,10 @@ html {
     padding-left: 40px;
 }
 
+#navbar-searchbar-container #seachbar-mic {
+    background-color: #0000000d;
+}
+
 #navbar-searchbar {
     height: 40px;
     margin-left: 32px;
@@ -87,16 +91,12 @@ html {
     width: 76px;
     height: 40px;
     border-radius: 0px 40px 40px 0px;
-    background-color: #f0f0f0;
-    border-left: 0.8px solid #d3d3d3;
+    background-color: #0000000d;
+    border-left: 1px solid #d3d3d3;
 }
 
 #navbar-searchbar #searchbar-trailing:hover {
     background-color: #0000000d;
-}
-
-#navbar-searchbar #seachbar-mic {
-    background-color: #f2f2f2;
 }
 
 #navbar-trailing {
@@ -225,6 +225,63 @@ html {
     font-weight: 400;
     line-height: 1.8rem;
     color: #909090;
+}
+
+/* Siderail */
+
+#siderail {
+    width: 72px;
+    padding: 0 4px;
+    padding-top: 4px;
+}
+
+#siderail .nav-item .nav-link {
+    width: 64px;
+    padding: 16px 0 14px !important;
+    border-radius: 10px !important;
+}
+
+#siderail .nav-item .nav-link:hover {
+    background-color: #0000000d;
+}
+
+#siderail .nav-item .nav-link .icon {
+    margin-bottom: 6px;
+}
+
+#siderail .nav-item .nav-link .title {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: var(--font-color);
+}
+
+#siderail .nav-item .nav-link.active {
+    background-color: transparent;
+}
+
+#siderail .nav-item .nav-link.active:hover {
+    background-color: #0000000d;
+}
+
+/* Bottom navbar */
+
+#bottom-navbar {
+    height: 56px;
+    background-color: #ffffffe6;
+    border-top: 0.8px solid #e5e5e5;
+}
+
+#bottom-navbar .nav-item .nav-link {
+    height: 56px;
+}
+
+#bottom-navbar .nav-item .nav-link .title {
+    padding: 0 4px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.1rem;
+    color: var(--font-color);
 }
 
 /* Content */

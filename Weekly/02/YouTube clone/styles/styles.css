@@ -297,8 +297,48 @@ html {
     background: #606060;
 }
 
+/* Filter */
+
+#filter {
+    height: 56px;
+    background-color: white;
+    gap: 12px;
+    padding: 0 24px !important;
+}
+
+#filter::-webkit-scrollbar {
+    display: none;
+}
+
+#filter .filter-chip {
+    height: 32px;
+    padding: 0px 12px;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    margin: 12px 0px;
+}
+
+#filter .filter-chip span {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--font-color);
+}
+
+#filter .filter-chip.active {
+    background-color: black;
+}
+
+#filter .filter-chip.active span {
+    color: white;
+}
+
+/* Videos */
+
 #content #content-row {
-    padding: var(--content-padding-vertical) var(--content-padding-horizontal);
+    padding: var(--content-padding);
 }
 
 /* #content #content-row .col:not(:last-child):nth-child(3n) {
@@ -331,15 +371,11 @@ html {
     color: var(--font-color);
 }
 
-/* Videos */
+/* Video item */
 
 #content .video-item {
-    padding: var(--content-item-padding-vertical) var(--content-item-padding-horizontal);
+    padding: var(--content-item-padding);
     border-radius: var(--content-item-border-radius);
-}
-
-#content .video-item:hover {
-    background-color: #0000000d;
 }
 
 #content .video-item a {
@@ -369,7 +405,7 @@ html {
 }
 
 #content .video-item .details {
-    padding: 0 var(--content-item-details-padding-horizontal);
+    padding: var(--content-item-details-padding);
 }
 
 #content .video-item .details .leading {
@@ -411,7 +447,7 @@ html {
     margin-top: 12px;
 }
 
-/* Shorts */
+/* Shorts item */
 
 #content .shorts-item {
     padding: 8px;
@@ -462,6 +498,12 @@ html {
     width: 24px;
     height: 24px;
     margin-top: 12px;
+}
+
+/* Modal sidebar (Offcanvas) */
+
+#modalSidebar {
+    width: 240px;
 }
 
 /* Custom classes */

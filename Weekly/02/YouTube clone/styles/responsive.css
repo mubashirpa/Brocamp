@@ -7,13 +7,11 @@
     --navbar-profile-img-size: 24px;
     --navbar-trailing-gap: 0px;
 
-    --content-scrollbar-width: 4px;
-    --content-padding-vertical: 0px;
-    --content-padding-horizontal: 0px;
+    --content-scrollbar-width: 0px;
+    --content-padding: 0px;
     --content-gap-vertical: 24px;
-    --content-item-padding-vertical: 0px;
-    --content-item-padding-horizontal: 0px;
-    --content-item-details-padding-horizontal: 12px;
+    --content-item-padding: 0px;
+    --content-item-details-padding: 0 12px;
     --content-item-border-radius: 0px;
     --content-shorts-header-padding: 0 0 4px 0px;
     --content-shorts-row-overflow: auto;
@@ -34,10 +32,9 @@
         --navbar-brand-img-padding: 0 14px 0 16px;
         --navbar-profile-img-size: 32px;
 
-        --content-padding-vertical: 16px;
-        --content-padding-horizontal: 8px;
-        --content-item-padding-horizontal: 8px;
-        --content-item-details-padding-horizontal: 0px;
+        --content-padding: 16px 8px;
+        --content-item-padding: 8px;
+        --content-item-details-padding: 0px;
         --content-item-border-radius: 12px;
         --content-shorts-header-padding: 0 0 16px 16px;
         --content-shorts-row-overflow: hidden;
@@ -52,6 +49,10 @@
     #navbar-profile-button:hover {
         background-color: transparent;
     }
+
+    #content .video-item:hover {
+        background-color: #0000000d;
+    }
 }
 
 /* Medium */
@@ -61,7 +62,6 @@
         --navbar-trailing-gap: 8px;
 
         --content-scrollbar-width: 10px;
-        --content-padding-horizontal: 0px;
         --content-gap-vertical: 32px;
         --content-item-padding-vertical: 8px;
     }

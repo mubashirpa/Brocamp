@@ -27,7 +27,751 @@
   <body>
     <!-- Body -->
     <div class="container-fluid p-0">
-      <!-- Top appbar -->
+      <!-- Modal sidebar -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="modalSidebar"
+        aria-labelledby="modalSidebar"
+      >
+        <div class="offcanvas-header d-flex align-items-center">
+          <div
+            role="button"
+            class="button d-none d-sm-flex justify-content-center align-items-center rounded-pill"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="images/menu.svg" alt="Menu" />
+          </div>
+
+          <a
+            class="navbar-brand d-flex align-items-center m-0"
+            href="#"
+            title="YouTube Home"
+          >
+            <img
+              src="images/logo.svg"
+              alt="YouTube"
+              class="d-inline-block"
+              id="navbar-brand-img"
+            />
+          </a>
+        </div>
+        <div class="offcanvas-body p-0 overflow-hidden">
+          <div class="d-flex flex-column flex-shrink-0 h-100" id="sidebar">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link active d-flex align-items-center p-0"
+                  aria-current="page"
+                  title="Home"
+                >
+                  <img
+                    src="images/home.svg"
+                    alt="Home"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Shorts"
+                >
+                  <img
+                    src="images/shorts.svg"
+                    alt="Shorts"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Shorts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Subscriptions"
+                >
+                  <img
+                    src="images/subscriptions.svg"
+                    alt="Subscriptions"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Subscriptions
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" style="margin-left: 12px" />
+
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link header d-flex align-items-center p-0"
+                  title="You"
+                >
+                  You
+                  <img
+                    src="images/arrow-right.svg"
+                    alt="You"
+                    class="trailing"
+                    width="16"
+                    height="16"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Your channel"
+                >
+                  <img
+                    src="images/channel.svg"
+                    alt="Your channel"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Your channel
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="History"
+                >
+                  <img
+                    src="images/history.svg"
+                    alt="History"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  History
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Playlists"
+                >
+                  <img
+                    src="images/playlists.svg"
+                    alt="Playlists"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Playlists
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Your videos"
+                >
+                  <img
+                    src="images/videos.svg"
+                    alt="Your videos"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Your videos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Your podcasts"
+                >
+                  <img
+                    src="images/podcasts.svg"
+                    alt="Your podcasts"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Your podcasts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Watch later"
+                >
+                  <img
+                    src="images/watch-later.svg"
+                    alt="Watch later"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Watch later
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Liked videos"
+                >
+                  <img
+                    src="images/liked.svg"
+                    alt="Liked videos"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Liked videos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Downloads"
+                >
+                  <img
+                    src="images/downloads.svg"
+                    alt="Downloads"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Downloads
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" />
+
+            <ul class="nav nav-pills flex-column">
+              <li class="section-title">
+                <h3 class="m-0">Subscriptions</h3>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="MrBeast"
+                >
+                  <img
+                    src="images/channel1.jpg"
+                    alt="MrBeast"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate">MrBeast</span>
+                  <img
+                    src="images/streaming.svg"
+                    alt="Streaming"
+                    class="trailing"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Panda"
+                >
+                  <img
+                    src="images/channel2.jpg"
+                    alt="Panda"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate">Panda</span>
+                  <img
+                    src="images/streaming.svg"
+                    alt="Streaming"
+                    class="trailing"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Koltin by JetBrains"
+                >
+                  <img
+                    src="images/channel3.jpg"
+                    alt="Kotlin by JetBrains"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate"
+                    >Kotlin by JetBrains</span
+                  >
+                  <span class="trailing newness-dot rounded-pill"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Brototype Malayalam"
+                >
+                  <img
+                    src="images/channel4.jpg"
+                    alt="Brototype Malayalam"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate"
+                    >Brototype Malayalam</span
+                  >
+                  <span class="trailing newness-dot rounded-pill"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Philipp Lackner"
+                >
+                  <img
+                    src="images/channel5.jpg"
+                    alt="Philipp Lackner"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate">Philipp Lackner</span>
+                  <span class="trailing newness-dot rounded-pill"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Marques Brownlee"
+                >
+                  <img
+                    src="images/channel6.jpg"
+                    alt="Marques Brownlee"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate"
+                    >Marques Brownlee</span
+                  >
+                  <span class="trailing newness-dot rounded-pill"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Mrwhosetheboss"
+                >
+                  <img
+                    src="images/channel7.jpg"
+                    alt="Mrwhosetheboss"
+                    class="leading rounded-pill"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="flex-grow-1 text-truncate">Mrwhosetheboss</span>
+                  <span class="trailing newness-dot rounded-pill"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Show more"
+                >
+                  <img
+                    src="images/arrow-down.svg"
+                    alt="Show more"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Show more
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" />
+
+            <ul class="nav nav-pills flex-column">
+              <li class="section-title">
+                <h3 class="m-0">Explore</h3>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Trending"
+                >
+                  <img
+                    src="images/trending.svg"
+                    alt="Trending"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Trending
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Shopping"
+                >
+                  <img
+                    src="images/shopping.svg"
+                    alt="Shopping"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Shopping
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Music"
+                >
+                  <img
+                    src="images/music.svg"
+                    alt="Music"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Music
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Films"
+                >
+                  <img
+                    src="images/films.svg"
+                    alt="Films"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Films
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Live"
+                >
+                  <img
+                    src="images/live.svg"
+                    class="leading"
+                    alt="Live"
+                    width="24"
+                    height="24"
+                  />
+                  Live
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Gaming"
+                >
+                  <img
+                    src="images/gaming.svg"
+                    alt="Gaming"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Gaming
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="News"
+                >
+                  <img
+                    src="images/news.svg"
+                    alt="News"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  News
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Sport"
+                >
+                  <img
+                    src="images/sport.svg"
+                    alt="Sport"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Sport
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Courses"
+                >
+                  <img
+                    src="images/courses.svg"
+                    alt="Courses"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Courses
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Fashion & beauty"
+                >
+                  <img
+                    src="images/fashion.svg"
+                    alt="Fashion & beauty"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Fashion & beauty
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Podcasts"
+                >
+                  <img
+                    src="images/podcasts.svg"
+                    alt="Podcasts"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Podcasts
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" />
+
+            <ul class="nav nav-pills flex-column">
+              <li class="section-title">
+                <h3 class="m-0">More from YouTube</h3>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="YouTube Premium"
+                >
+                  <img
+                    src="images/premuim.svg"
+                    alt="YouTube Premium"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  YouTube Premium
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="YouTube Studio"
+                >
+                  <img
+                    src="images/studio.svg"
+                    alt="YouTube Studio"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  YouTube Studio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="YouTube Music"
+                >
+                  <img
+                    src="images/youtube-music.svg"
+                    alt="YouTube Music"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  YouTube Music
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="YouTube Kids"
+                >
+                  <img
+                    src="images/kids.svg"
+                    alt="YouTube Kids"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  YouTube Kids
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" />
+
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Settings"
+                >
+                  <img
+                    src="images/settings.svg"
+                    alt="Settings"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Settings
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Report history"
+                >
+                  <img
+                    src="images/history.svg"
+                    alt="Report history"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Report history
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Help"
+                >
+                  <img
+                    src="images/help.svg"
+                    alt="Help"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Help
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link d-flex align-items-center p-0"
+                  title="Send feedback"
+                >
+                  <img
+                    src="images/feedback.svg"
+                    alt="Send feedback"
+                    class="leading"
+                    width="24"
+                    height="24"
+                  />
+                  Send feedback
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider opacity-100 m-0" />
+
+            <!-- drawer footer -->
+
+            <footer class="footer">
+              <div class="footer-section">
+                <a href="#">About</a>
+                <a href="#">Press</a>
+                <a href="#">Copyright</a>
+                <a href="#">Contact us</a>
+                <a href="#">Creator</a>
+                <a href="#">Advertise</a>
+                <a href="#">Developers</a>
+              </div>
+              <div class="footer-section">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Policy & Safety</a>
+                <a href="#">How YouTube works</a>
+                <a href="#">Test new features</a>
+              </div>
+              <div class="footer-section" style="padding-bottom: 16px">
+                <span>© 2024 Google LLC</span>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top navbar -->
       <nav class="navbar fixed-top p-0" id="navbar">
         <div class="container-fluid p-0 d-flex flex-nowrap">
           <!-- Leading -->
@@ -35,6 +779,9 @@
             <div
               role="button"
               class="button d-none d-sm-flex justify-content-center align-items-center rounded-pill"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#modalSidebar"
+              aria-controls="modalSidebar"
             >
               <img src="images/menu.svg" alt="Menu" />
             </div>
@@ -976,7 +1723,49 @@
         </div>
 
         <!-- Content -->
-        <div class="container-fluid flex-grow-1" id="content">
+        <div class="container-fluid flex-grow-1 p-0" id="content">
+          <!-- Filter -->
+          <div
+            class="container-fluid p-0 m-o position-sticky top-0 z-1 d-flex align-items-center overflow-x-auto text-nowrap"
+            id="filter"
+          >
+            <div
+              class="filter-chip d-flex d-sm-none align-items-center"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#modalSidebar"
+              aria-controls="modalSidebar"
+            >
+              <img
+                src="images/explore.svg"
+                alt="Explore"
+                width="24"
+                height="24"
+              />
+            </div>
+            <div class="filter-chip active d-flex align-items-center">
+              <span>All</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>Gaming</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>News</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>Live</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>Music</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>Recently uploaded</span>
+            </div>
+            <div class="filter-chip d-flex align-items-center">
+              <span>New to you</span>
+            </div>
+          </div>
+
+          <!-- Videos -->
           <div class="row gy-5" id="content-row">
             <div class="video-item col-12 col-sm-6 col-lg-4">
               <a href="#">
@@ -1068,7 +1857,6 @@
             </div>
 
             <!-- Shorts -->
-
             <div class="col-12" style="padding: 0 16px">
               <div class="d-flex" id="shorts-header">
                 <img src="images/shorts-red.svg" alt="Shorts" />
@@ -1346,6 +2134,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- BS5 Tooltip -->
     <script>
       const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'

@@ -3,14 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mubashir P A" />
+
+    <!-- Title and Description -->
     <title>Mubashir P A</title>
+    <meta
+      name="description"
+      content="Mubashir P A is a mobile application developer specializing in creating innovative and user-friendly apps. Explore a portfolio of dynamic projects and discover how to elevate your brand with expert app development."
+    />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="mobile app development, Kotlin, Java, Jetpack Compose, Kotlin Multiplatform, app design, app development, Mubashir P A"
+    />
+
+    <!-- Open Graph Meta Tags (for social media) -->
+    <meta
+      property="og:title"
+      content="Mubashir P A - Mobile Application Developer"
+    />
+    <meta
+      property="og:description"
+      content="Specializing in creating innovative and user-friendly mobile apps. Discover how to bring your app vision to life with expert development and design services."
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://mubashirpa.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mubashir P A - Mobile Application Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Specializing in creating innovative and user-friendly mobile apps. Discover how to bring your app vision to life with expert development and design services."
+    />
+    <meta name="twitter:image" content="" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mubashirpa.github.io/portfolio/" />
 
     <!-- Styles -->
-     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/icons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/icons/favicon-32x32.png"
+    />
 
     <!-- Bootstrap -->
     <link
@@ -27,7 +80,202 @@
     />
   </head>
   <body>
-    <div class="container-fluid p-0"></div>
+    <div class="container-fluid p-0 d-flex flex-column vh-100">
+      <main class="flex-shrink-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg py-3">
+          <div class="container px-5">
+            <a class="navbar-brand" href="index.html">
+              <span class="fw-bolder text-primary">Mubashir</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="py-5">
+          <div class="container px-5 pb-5">
+            <div class="row gx-5 align-items-center">
+              <div class="col-xxl-5">
+                <div class="text-center text-xxl-start">
+                  <div
+                    class="bg-gradient-primary-to-secondary badge text-white mb-4"
+                  >
+                    <div class="text-uppercase">
+                      Design &middot; Build &middot; Run
+                    </div>
+                  </div>
+                  <div class="fs-3 fw-light text-muted">
+                    Transform your ideas into reality
+                  </div>
+                  <h1 class="display-3 fw-bolder mb-5">
+                    <span class="text-gradient d-inline"
+                      >Build your app, build your future</span
+                    >
+                  </h1>
+                  <div
+                    class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
+                  >
+                    <a
+                      class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                      href="resume.html"
+                      >Resume</a
+                    >
+                    <a
+                      class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                      href="#about"
+                      >About</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile image -->
+              <div class="col-xxl-7">
+                <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                  <div class="profile bg-gradient-primary-to-secondary">
+                    <img
+                      class="profile-img"
+                      src="images/avatar.png"
+                      alt="Avatar"
+                    />
+                    <div class="dots-1">
+                      <img
+                        src="images/svg-dots-white.svg"
+                        alt="Dots"
+                        width="24"
+                      />
+                    </div>
+                    <div class="dots-2">
+                      <img
+                        src="images/svg-dots-blue.svg"
+                        alt="Dots"
+                        width="24"
+                      />
+                    </div>
+                    <div class="dots-3">
+                      <img
+                        src="images/svg-dots-white.svg"
+                        alt="Dots"
+                        width="24"
+                      />
+                    </div>
+                    <div class="dots-4">
+                      <img
+                        src="images/svg-dots-blue.svg"
+                        alt="Dots"
+                        width="24"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- About -->
+        <section class="bg-light py-5" id="about">
+          <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+              <div class="col-xxl-8">
+                <div class="text-center my-5">
+                  <h2 class="display-5 fw-bolder">
+                    <span class="text-gradient d-inline">About Me</span>
+                  </h2>
+                  <p class="lead fw-light mb-4">
+                    My name is Mubashir P A and I create mobile apps.
+                  </p>
+                  <p class="text-muted">
+                    Passionate and innovative Computer Science Engineer with a
+                    strong foundation in mobile application development and a
+                    flair for technology. Adept at creative problem-solving,
+                    with extensive expertise in building robust applications,
+                    integrating APIs, and collaborating with cross-functional
+                    teams. Proven track record of self learning and mastering
+                    diverse programming domains, ensuring adaptability in the
+                    ever-evolving tech landscape. Skilled in analyzing complex
+                    problems and crafting impactful, cutting-edge solutions.
+                  </p>
+                  <div class="d-flex justify-content-center fs-2 gap-4">
+                    <a
+                      class="text-gradient"
+                      href="https://x.com/mubash1r_pa"
+                      aria-label="Mubashir P A (@mubash1r_pa) / X"
+                      target="_blank"
+                      rel="noopener"
+                      ><i class="bi bi-twitter"></i
+                    ></a>
+                    <a
+                      class="text-gradient"
+                      href="https://www.linkedin.com/in/mubashirpa"
+                      aria-label="Mubashir P A | LinkedIn"
+                      target="_blank"
+                      rel="noopener"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                    <a
+                      class="text-gradient"
+                      href="http://github.com/mubashirpa"
+                      aria-label="mubashirpa (Mubashir P A)"
+                      target="_blank"
+                      rel="noopener"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer-->
+      <footer class="py-4 mt-auto">
+        <div class="container px-5">
+          <div
+            class="row align-items-center justify-content-between flex-column flex-sm-row"
+          >
+            <div class="col-auto">
+              <div class="small m-0">Copyright &copy; Mubashir 2024</div>
+            </div>
+            <div class="col-auto">
+              <a class="small text-decoration-none" href="#">Privacy</a>
+              <span class="mx-1">&middot;</span>
+              <a class="small text-decoration-none" href="#">Terms</a>
+              <span class="mx-1">&middot;</span>
+              <a class="small text-decoration-none" href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <!-- Bootstrap -->
     <script

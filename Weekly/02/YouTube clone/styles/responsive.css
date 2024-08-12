@@ -15,6 +15,8 @@
     --content-item-padding-horizontal: 0px;
     --content-item-details-padding-horizontal: 12px;
     --content-item-border-radius: 0px;
+    --content-shorts-header-padding: 0 0 4px 0px;
+    --content-shorts-row-overflow: auto;
 
     --font-color: #0f0f0f;
 }
@@ -31,16 +33,14 @@
         --navbar-padding-x: 8px;
         --navbar-brand-img-padding: 0 14px 0 16px;
         --navbar-profile-img-size: 32px;
-        --navbar-trailing-gap: 0px;
 
-        --content-scrollbar-width: 4px;
         --content-padding-vertical: 16px;
         --content-padding-horizontal: 8px;
-        --content-gap-vertical: 24px;
-        --content-item-padding-vertical: 0px;
         --content-item-padding-horizontal: 8px;
         --content-item-details-padding-horizontal: 0px;
         --content-item-border-radius: 12px;
+        --content-shorts-header-padding: 0 0 16px 16px;
+        --content-shorts-row-overflow: hidden;
     }
 
     #navbar-profile-button {
@@ -57,22 +57,13 @@
 /* Medium */
 @media only screen and (min-width: 768px) {
     :root {
-        --icon-button-size: 40px;
-
-        --navbar-height: 56px;
         --navbar-padding-x: 16px;
-        --navbar-brand-img-padding: 0 14px 0 16px;
-        --navbar-profile-img-size: 32px;
         --navbar-trailing-gap: 8px;
 
         --content-scrollbar-width: 10px;
-        --content-padding-vertical: 16px;
         --content-padding-horizontal: 0px;
         --content-gap-vertical: 32px;
         --content-item-padding-vertical: 8px;
-        --content-item-padding-horizontal: 8px;
-        --content-item-details-padding-horizontal: 0px;
-        --content-item-border-radius: 12px;
     }
 }
 

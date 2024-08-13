@@ -19,9 +19,6 @@
     --font-color: #0f0f0f;
 }
 
-/* Extra small */
-@media only screen and (max-width: 575px) {}
-
 /* Small */
 @media only screen and (min-width: 576px) {
     :root {
@@ -66,12 +63,3 @@
         --content-item-padding-vertical: 8px;
     }
 }
-
-/* Larger */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large */
-@media only screen and (min-width: 1200px) {}
-
-/* Extra extra large */
-@media only screen and (min-width: 1400px) {}

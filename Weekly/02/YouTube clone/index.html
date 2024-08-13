@@ -885,7 +885,15 @@
               data-bs-placement="bottom"
               data-bs-title="Notifications"
             >
-              <img src="images/notifications.svg" alt="Notifications" />
+              <div class="position-relative">
+                <img src="images/notifications.svg" alt="Notifications" />
+                <span
+                  class="position-absolute translate-middle badge rounded-pill d-flex align-items-center justify-content-center"
+                  id="notification-badge"
+                >
+                  9+
+                </span>
+              </div>
             </div>
 
             <div
@@ -1862,10 +1870,13 @@
 
             <!-- Shorts -->
             <div class="col-12" style="padding: 0 16px">
+              <!-- Shorts header -->
               <div class="d-flex" id="shorts-header">
                 <img src="images/shorts-red.svg" alt="Shorts" />
                 <span>Shorts</span>
               </div>
+
+              <!-- Shorts items -->
               <div
                 class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 flex-nowrap"
                 id="shorts-row"
@@ -1960,6 +1971,22 @@
                     </div>
                   </a>
                 </div>
+              </div>
+
+              <!-- Show more container -->
+              <div
+                class="d-none d-sm-flex align-items-center justify-content-evenly"
+                id="show-more-container"
+              >
+                <hr class="divider flex-fill" />
+                <div
+                  class="d-flex justify-content-center align-items-center"
+                  id="show-more"
+                >
+                  <span>Show more</span>
+                  <img src="images/arrow-down.svg" alt="Show more" />
+                </div>
+                <hr class="divider flex-fill" />
               </div>
             </div>
 

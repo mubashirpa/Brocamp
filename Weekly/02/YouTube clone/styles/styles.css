@@ -97,6 +97,18 @@ html {
     height: var(--navbar-profile-img-size);
 }
 
+#notification-badge {
+    height: 16px;
+    padding: 0 4px !important;
+    top: 5px;
+    left: 22px;
+    background-color: #cc0000;
+    font-family: "Roboto", "Arial", sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+}
+
 /* Navigation wrapper */
 
 #navigation-wrapper {
@@ -369,6 +381,42 @@ html {
     font-weight: 700;
     line-height: 2.8rem;
     color: var(--font-color);
+}
+
+/* Show more container */
+
+#content #content-row #show-more-container .divider {
+    border-top: 1px solid #e5e5e5;
+    opacity: 1;
+}
+
+#content #content-row #show-more-container #show-more {
+    width: 360px;
+    max-width: 100%;
+    height: 36px;
+    margin-top: 8px;
+    padding: 0 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+#content #content-row #show-more-container #show-more:hover {
+    background-color: #0000000d;
+}
+
+#content #content-row #show-more-container #show-more span {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    color: var(--font-color);
+}
+
+#content #content-row #show-more-container #show-more img {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
 }
 
 /* Video item */

@@ -146,67 +146,49 @@
               </div>
               <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
-                  <form
-                    id="contactForm"
-                    data-sb-form-api-token="cf71339c-1741-4885-a847-829c77c163ee"
-                  >
+                  <form class="needs-validation" id="contactForm" novalidate>
                     <!-- Name -->
                     <div class="form-floating mb-3">
                       <input
+                        type="text"
                         class="form-control"
                         id="name"
-                        type="text"
                         placeholder="Enter your name"
-                        data-sb-validations="required"
+                        required
                       />
                       <label for="name">Full name</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="name:required"
-                      >
-                        A name is required.
+                      <div class="invalid-feedback">
+                        Please provide a valid name.
                       </div>
                     </div>
 
                     <!-- Email address -->
                     <div class="form-floating mb-3">
                       <input
+                        type="email"
                         class="form-control"
                         id="email"
-                        type="email"
                         placeholder="name@example.com"
-                        data-sb-validations="required,email"
+                        required
                       />
                       <label for="email">Email address</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:required"
-                      >
-                        An email is required.
-                      </div>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:email"
-                      >
-                        Email is not valid.
+                      <div class="invalid-feedback">
+                        Please provide a valid Email address.
                       </div>
                     </div>
 
                     <!-- Phone number -->
                     <div class="form-floating mb-3">
                       <input
+                        type="tel"
                         class="form-control"
                         id="phone"
-                        type="tel"
                         placeholder="+91 12345 67890"
-                        data-sb-validations="required"
+                        required
                       />
                       <label for="phone">Phone number</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="phone:required"
-                      >
-                        A phone number is required.
+                      <div class="invalid-feedback">
+                        Please provide a valid phone number.
                       </div>
                     </div>
 
@@ -214,30 +196,24 @@
                     <div class="form-floating mb-3">
                       <textarea
                         class="form-control"
-                        id="message"
-                        type="text"
                         placeholder="Enter your message here"
+                        id="message"
                         style="height: 10rem"
-                        data-sb-validations="required"
+                        required
                       ></textarea>
                       <label for="message">Message</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="message:required"
-                      >
-                        A message is required.
-                      </div>
+                      <div class="invalid-feedback">A message is required.</div>
                     </div>
 
                     <!-- Submit success message-->
-                    <div class="d-none" id="submitSuccessMessage">
+                    <div style="display: none" id="submitSuccessMessage">
                       <div class="text-center mb-3">
                         <div class="fw-bolder">Form submission successful!</div>
                       </div>
                     </div>
 
                     <!-- Submit error message-->
-                    <div class="d-none" id="submitErrorMessage">
+                    <div style="display: none" id="submitErrorMessage">
                       <div class="text-center text-danger mb-3">
                         Error sending message!
                       </div>
@@ -246,9 +222,9 @@
                     <!-- Submit Button-->
                     <div class="d-grid">
                       <button
-                        class="btn btn-primary btn-lg disabled"
-                        id="submitButton"
+                        class="btn btn-primary btn-lg"
                         type="submit"
+                        id="submitButton"
                       >
                         Submit
                       </button>
@@ -284,6 +260,81 @@
       </footer>
     </div>
 
+    <!-- Form validation -->
+    <script>
+      (() => {
+        "use strict";
+
+        const contactForm = document.getElementById("contactForm");
+        const nameInput = document.getElementById("name");
+        const phoneInput = document.getElementById("phone");
+        const submitSuccessMessage = document.getElementById(
+          "submitSuccessMessage"
+        );
+        const submitErrorMessage =
+          document.getElementById("submitErrorMessage");
+
+        contactForm.addEventListener(
+          "submit",
+          (event) => {
+            // Reset custom validation messages
+            nameInput.setCustomValidity("");
+            phoneInput.setCustomValidity("");
+
+            // Custom name validation
+            if (/\d/.test(nameInput.value)) {
+              nameInput.setCustomValidity("Name should not contain numbers.");
+            }
+
+            // Custom phone number validation
+            if (!/^\+?\d{10,15}$/.test(phoneInput.value)) {
+              phoneInput.setCustomValidity("Phone number is not valid.");
+            }
+
+            if (!contactForm.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              event.preventDefault();
+
+              emailjs
+                .sendForm("service_ry01u7l", "template_ceg6iy6", "#contactForm")
+                .then(
+                  (response) => {
+                    // Show success message
+                    submitSuccessMessage.style.display = "block";
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Hide success message after 3 seconds
+                    setTimeout(function () {
+                      submitSuccessMessage.style.display = "none";
+                    }, 3000);
+
+                    console.log("SUCCESS!", response.status, response.text);
+                  },
+                  (error) => {
+                    // Show error message
+                    submitErrorMessage.style.display = "block";
+
+                    // Hide error message after 3 seconds
+                    setTimeout(function () {
+                      submitErrorMessage.style.display = "none";
+                    }, 3000);
+
+                    console.log("FAILED...", error);
+                  }
+                );
+            }
+
+            contactForm.classList.add("was-validated");
+          },
+          false
+        );
+      })();
+    </script>
+
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -296,7 +347,17 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Start Bootstrap Forms -->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- EmailJs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "jyJDN4CdkRhTEDTwH",
+        });
+      })();
+    </script>
   </body>
 </html>

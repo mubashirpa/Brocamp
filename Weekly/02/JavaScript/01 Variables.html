@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      // Variables
+
+      let x = "hello";
+      // let x = 5; (Thorws - SyntaxError: Identifier 'x' has already been declared)
+      x = 5; // Can change value and datatype
+
+      const y = "Immutable"; // Must be initialised
+      // y = "New"; (Throws - TypeError: Assignment to constant variable)
+
+      var z = "Old";
+      z = 5; // Can change value and datatype
+      var z = "Redeclare"; // Can redeclare
+
+      document.write(`${x}<br>${y}<br>${z}`);
+
+      a = "Without keyword";
+      const _a = "Start with _";
+      const $a = "Start with $";
+      // cont 4a = "Should not start with numbers"
+    </script>
+  </body>
+</html>

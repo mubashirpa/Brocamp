@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form action="" novalidate>
+      <label for="email">Email</label>
+      <br />
+      <input type="email" name="email" id="email" required />
+      <br />
+      <label for="password">Password</label>
+      <br />
+      <input type="password" name="password" id="password" required />
+      <br />
+      <input type="checkbox" name="accept" id="accept" required />
+      <label for="accept">Accept</label>
+      <br />
+      <input type="submit" value="Login" />
+    </form>
+
+    <script>
+      const name = document.querySelector("#email");
+      const password = document.querySelector("#password");
+      const accept = document.querySelector("#accept");
+
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          let success = true;
+
+          if (name.value === "") {
+            alert("Enter a name");
+            success = false;
+          }
+
+          if (password.value === "") {
+            alert("Enter a password");
+            success = false;
+          }
+
+          if (!accept.checked) {
+            alert("Please accept terms and conditions");
+            success = false;
+          }
+
+          if (!success) {
+            event.preventDefault();
+          }
+        });
+    </script>
+
+    <form action="" onsubmit="return validateEmail()" novalidate>
+      <label for="email2">Email</label>
+      <br />
+      <input type="email" name="email2" id="email2" />
+      <br />
+      <input type="submit" value="Login" />
+    </form>
+
+    <script>
+      function validateEmail() {
+        var email = document.getElementById("email2").value;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

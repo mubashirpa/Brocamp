@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <button type="button" onclick="welcome('HTML')">Welcome</button>
+
+    <script>
+      hello();
+      greet();
+      greet("Person");
+
+      function hello() {
+        document.write("<br>Hello<br>");
+      }
+
+      function greet(name = "Anonymous") {
+        document.write(`Hello ${name}<br>`);
+      }
+
+      function subtract(a, b) {
+        return a - b;
+      }
+      document.write(subtract(10, 5) + "<br>");
+
+      // Functional expression
+      const multiply = function (a, b) {
+        return a * b;
+      };
+      document.write(multiply(5, 5) + "<br>");
+
+      // Arrow function
+      const add = (a, b) => a + b;
+      document.write(add(5, 5));
+
+      function welcome(name) {
+        alert(name);
+      }
+    </script>
+  </body>
+</html>

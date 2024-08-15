@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datatypes</title>
+  </head>
+  <body>
+    <script>
+      const a = "Hello"; // String
+      const b = 5.5; // Number
+      const c = true; // Boolean
+      const d = BigInt(123456789123456789); // BigInt
+      let e; // Undefined
+      const f = null; // Null
+      const g = Symbol("Hello"); // Symbol
+      const h = {
+        name: "Hello",
+        age: 10,
+      }; // Object
+
+      document.writeln(a + ": " + typeof a + "<br>");
+      document.writeln(b + ": " + typeof b + "<br>");
+      document.writeln(c + ": " + typeof c + "<br>");
+      document.writeln(d + ": " + typeof d + "<br>");
+      document.writeln(e + ": " + typeof e + "<br>");
+      document.writeln(f + ": " + typeof f + "<br>");
+      document.writeln(g.description + ": " + typeof g + "<br>");
+      document.writeln(h + ": " + typeof h);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <button role="button">Click 1</button>
+    <button role="button">Click 2</button>
+
+    <script>
+        const buttons = document.getElementsByTagName("button");
+
+        buttons[0].onclick = click;
+
+        function click(num) {
+            alert(`Button ${num} clicked`);
+        }
+    </script>
+  </body>
+</html>

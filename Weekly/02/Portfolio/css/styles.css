@@ -49,11 +49,19 @@
     top: 4vw;
 }
 
+.profile .dots-1 svg {
+    fill: #ffffff;
+}
+
 .profile .dots-2 {
     position: absolute;
     width: 3vw;
     right: -4vw;
     top: 6.05vw;
+}
+
+.profile .dots-2 svg {
+    fill: #1e30f3;
 }
 
 .profile .dots-3 {
@@ -63,9 +71,17 @@
     bottom: 6.05vw;
 }
 
+.profile .dots-3 svg {
+    fill: #ffffff;
+}
+
 .profile .dots-4 {
     position: absolute;
     width: 3vw;
     left: -4vw;
     bottom: 4vw;
+}
+
+.profile .dots-4 svg {
+    fill: #1e30f3;
 }

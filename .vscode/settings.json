@@ -4,5 +4,7 @@
         "6.C": "cpp",
         "stdbool.h": "c",
         "06.C": "cpp"
-    }
+    },
+    "codesnap.realLineNumbers": false,
+    "codesnap.transparentBackground": true
 }
